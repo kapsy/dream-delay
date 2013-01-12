@@ -59,7 +59,7 @@ public class DelayLineTest extends Activity {
 
 		@Override
 		public void onServiceDisconnected(ComponentName name) {
-			// this method will never be called
+			// 呼ばない
 		}
 	};
 
@@ -97,8 +97,6 @@ public class DelayLineTest extends Activity {
     		float d = (float)i / 100;
     		sendFloat("vol_fader_rec", d);
     		text.setText("現在の値：" + d);
-
-
 		}
 
 		@Override
@@ -110,7 +108,6 @@ public class DelayLineTest extends Activity {
 		public void onStopTrackingTouch(SeekBar seekbar) {
 			// TODO 自動生成されたメソッド・スタブ
 		}
-
     }
 
 	@Override
@@ -118,7 +115,6 @@ public class DelayLineTest extends Activity {
 		super.onDestroy();
 		cleanup();
 	}
-
 
     	private void initPd() {
 
@@ -168,32 +164,22 @@ public class DelayLineTest extends Activity {
 	 public void sendFloat(String s, float f) {
 		 PdBase.sendFloat(s, f);
 	 }
-
- /* Here is a more complex example of how to send a list of data to Pd.
-    Here we're assuming that s looks like a Pd-list,
-    for example s="foo bar blah".
-    See also PdBase.sendFloat() and PdBase.sendSymbol()
- public void send(String dest, String s) {
-   String[] pieces = s.split(" ");
-   Object[] list = new Object[pieces.length];
-
-   for (int i=0; i < pieces.length; i++) {
-     try {
-       list[i] = Float.parseFloat(pieces[i]);
-     } catch (NumberFormatException e) {
-       list[i] = pieces[i];
-     }
-   }
-
-   PdBase.sendList(dest, list);
- }*/
-
-
-
-
-
-
-
-
-
+	 
+/*
+	 public void send(String dest, String s) {
+	   String[] pieces = s.split(" ");
+	   Object[] list = new Object[pieces.length];
+	
+	   for (int i=0; i < pieces.length; i++) {
+	     try {
+	       list[i] = Float.parseFloat(pieces[i]);
+	     } catch (NumberFormatException e) {
+	       list[i] = pieces[i];
+	     }
+	   }
+	
+	   PdBase.sendList(dest, list);
+	 }
+*/
+	 
 }
