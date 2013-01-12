@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">DelayLineTest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_delay_line_test">DelayLineTest</string>
+    <string name="bang_vol">Bang Volume!</string>
+    <string name="text_init">Fader Val</string>
+    <string name="fader_label">Channel Volume</string>
+
+</resources>
