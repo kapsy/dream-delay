@@ -1,1 +1,5 @@
 Testing a delay line built in PD using libpd.
+
+Built to test modules used in PD would work with libpd, and that float and and method calls to send bang data could be done with usual Android widgets.
+
+Project is as-is, it will not be updated/fixed!
